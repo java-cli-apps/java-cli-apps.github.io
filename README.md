@@ -4,6 +4,6 @@
 
 ### Pierre-Yves Fourmond
 
-[Talk](https://java-cli-apps.github.io/)
+[Talk](index.html)
 
-[Annexes](https://java-cli-apps.github.io/Annexes.html)
+[Annexes](Annexes.html)

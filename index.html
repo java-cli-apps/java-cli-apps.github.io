@@ -315,10 +315,10 @@ Archive:  build/GenerateData.zip
 APP_DIR=generate-data
 
 BUILD=build
-BUILD_APP=<span class="hljs-variable">$(PUBLIC)</span>/<span class="hljs-variable">$(APP_DIR)</span>
+BUILD_APP=<span class="hljs-variable">$(BUILD)</span>/<span class="hljs-variable">$(APP_DIR)</span>
 
 <span class="hljs-section">package: build</span>
-	cd <span class="hljs-variable">$(PUBLIC)</span> &amp;&amp; zip --recurse-paths <span class="hljs-variable">$(APP_NAME)</span>.zip <span class="hljs-variable">$(APP_DIR)</span>/
+	cd <span class="hljs-variable">$(BUILD)</span> &amp;&amp; zip --recurse-paths <span class="hljs-variable">$(APP_NAME)</span>.zip <span class="hljs-variable">$(APP_DIR)</span>/
 
 <span class="hljs-section">build: prepare</span>
 	cp <span class="hljs-variable">$(APP_NAME)</span>.java <span class="hljs-variable">$(BUILD_APP)</span>/scripts
@@ -329,7 +329,7 @@ BUILD_APP=<span class="hljs-variable">$(PUBLIC)</span>/<span class="hljs-variabl
 	mkdir --parents <span class="hljs-variable">$(BUILD_APP)</span> <span class="hljs-variable">$(BUILD_APP)</span>/scripts <span class="hljs-variable">$(BUILD_APP)</span>/bin <span class="hljs-variable">$(BUILD_APP)</span>/lib
 
 <span class="hljs-section">clean:</span>
-	rm --force --recursive <span class="hljs-variable">$(PUBLIC)</span>
+	rm --force --recursive <span class="hljs-variable">$(BUILD)</span>
 </code></pre>
 <footer>Paris JUG Academy - 2024</footer>
 </section>

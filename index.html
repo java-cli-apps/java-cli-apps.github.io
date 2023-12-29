@@ -206,7 +206,7 @@ Hello Paris,JUG
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="13" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="24">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="un-script-pour-g%C3%A9n%C3%A9rer-des-donn%C3%A9es-de-test">Un script pour générer des données de test</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 -classpath lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 --enable-preview -classpath lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
 
 <span class="hljs-keyword">import</span> ...
 
@@ -222,7 +222,7 @@ Hello Paris,JUG
     <span class="hljs-meta">@Parameters(arity = &quot;1&quot;, description = &quot;The file containing the SQL create table request&quot;)</span>
     File sqlRequestFile;
 
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String... args)</span> {
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String... args)</span> {
         System.exit(<span class="hljs-keyword">new</span> <span class="hljs-title class_">CommandLine</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">GenerateData</span>()).execute(args));
     }
 

@@ -5,3 +5,5 @@
 [Talk](https://java-cli-apps.github.io/)
 
 [Annexes](https://java-cli-apps.github.io//Annexes.html)
+
+[Exemples de code](exemples/generate-data/README.md)

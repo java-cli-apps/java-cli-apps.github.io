@@ -212,7 +212,6 @@ Hello Paris,JUG
 
 <span class="hljs-meta">@Command(name = &quot;GenerateData&quot;, mixinStandardHelpOptions = true, version = &quot;0.1&quot;)</span>
 <span class="hljs-keyword">class</span> <span class="hljs-title class_">GenerateData</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Callable</span>&lt;Integer&gt; {
-
     <span class="hljs-meta">@Option(names = {&quot;-c&quot;, &quot;--column&quot;}, description = &quot;Map a column with a fixed value, mapping function or value from a file&quot;)</span>
     String[] columnMappings;
 
@@ -234,6 +233,7 @@ Hello Paris,JUG
 
     <span class="hljs-keyword">record</span> <span class="hljs-title class_">TableData</span><span class="hljs-params">(TableDefinition tableDefinition, TableRows tableRows)</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Exportable</span> { ... }
     <span class="hljs-keyword">record</span> <span class="hljs-title class_">TableDefinition</span><span class="hljs-params">(String name, List&lt;ColumnDefinition&gt; columnDefinitions)</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Exportable</span> { ... }
+    <span class="hljs-keyword">record</span> <span class="hljs-title class_">ColumnDefinition</span><span class="hljs-params">(String name, ColumnType type)</span> { ... }
     <span class="hljs-keyword">record</span> <span class="hljs-title class_">ColumnMappings</span><span class="hljs-params">(List&lt;ColumnMapping&gt; columnMappings)</span> { ... }
     <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Exportable</span> { String <span class="hljs-title function_">toSQLInserts</span><span class="hljs-params">()</span>; }
 }

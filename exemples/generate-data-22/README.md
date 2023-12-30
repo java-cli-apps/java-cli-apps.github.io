@@ -5,13 +5,13 @@ Un programme Java en ligne de commande pour générer des données de test à de
 Ce programme utilise les JEPs suivantes de Java 21 :
 
 - JEP 441: Pattern Matching for switch
-- JEP 443: Unnamed Patterns and Variables (Preview)
-- JEP 445: Unnamed Classes and Instance Main Methods (Preview)
 
 Ainsi que celles de Java 22 :
 
+- JEP 456: Unnamed Patterns and Variables
 - JEP 458: Launch Multi-File Source-Code Programs
 - JEP 459: String Templates (Second Preview)
+- JEP 463: Implicitly Declared Classes and Instance Main Methods (Second Preview)
 
 Le `Makefile` définit les cibles suivantes :
 

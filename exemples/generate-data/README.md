@@ -25,6 +25,8 @@ Vous pouvez :
 
 ## Tester depuis ce dépot Git
 
+![Tester en mode "dev"](../../images/GenerateData.gif)
+
 ```bash
 APP_DIR=. ./GenerateData.java \
 	--column id::random \
@@ -91,6 +93,8 @@ inflating: /home/user/generate-data/bin/GenerateData.sh
 ```
 
 ## Tester l'application installée
+
+![Tester l'application installée](../../images/InstallGenerateData.gif)
 
 ```bash
 export PATH=$HOME/generate-data/bin:$PATH

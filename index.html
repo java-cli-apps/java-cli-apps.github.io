@@ -115,7 +115,7 @@ Hello Paris,JUG
 </ul>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="3" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="6" style="" data-marpit-pagination-total="23" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="1" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="7" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="3" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="6" style="" data-marpit-pagination-total="23" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="7" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="scripting-avec-java-11-et-unix">Scripting avec Java 11 et Unix</h2>
 <p>Utilisons un Shebang pour lancer <code>java</code> :</p>
@@ -131,12 +131,9 @@ class Hello {
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">java-11:$ ./hello Paris JUG
 Hello Paris,JUG
 </code></pre>
-<ul>
-<li data-marpit-fragment="1"><img class="emoji" draggable="false" alt="ℹ️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2139.svg" data-marp-twemoji=""/> <strong>On a renommé <code>Hello.java</code> en <code>hello</code></strong></li>
-</ul>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="4" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="8" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="3" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="8" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="scripting-avec-java-11-et-unix-%F0%9F%A4%94">Scripting avec Java 11 et Unix <img class="emoji" draggable="false" alt="🤔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f914.svg" data-marp-twemoji=""/></h2>
 <p>Pourquoi cette façon de faire pose un problème aux devs ?</p>
@@ -148,11 +145,10 @@ Hello Paris,JUG
 </li>
 <li data-marpit-fragment="2">La première ligne <code>#!/usr/bin/java ...</code> n'est pas valide en Java
 <ul>
-<li>On aura une erreur de syntaxe</li>
+<li>On risque d'avoir une erreur de syntaxe</li>
 </ul>
 </li>
-<li data-marpit-fragment="3"><strong>Cela va être compliqué d'éditer notre code</strong></li>
-<li data-marpit-fragment="4"><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Et si on nommait le fichier <code>Hello.java</code> comme avant ?</li>
+<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> <strong>Et si on nommait le fichier <code>Hello.java</code> comme avant ?</strong></li>
 </ul>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
@@ -316,13 +312,15 @@ Archive:  build/GenerateData.zip
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="16" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="le-shell-de-lancement">Le Shell de lancement</h2>
-<p>Modifier le <code>classpath</code> défini dans <code>GenerateData.java</code> :</p>
+<p>Définir une variable d'environnement :</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=...
+</code></pre>
+<p>Lancer l'application avec un environnement :</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=... <span class="hljs-variable">$APP_DIR</span>/scripts/GenerateData.java ...
+</code></pre>
+<p>Et le <code>classpath</code> modifié :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath <span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.5.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.14.0.jar
 </code></pre>
-<p>Définir <code>APP_DIR</code> dans le Shell de lancement :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=<span class="hljs-variable">$HOME</span>/generate-data <span class="hljs-variable">$APP_DIR</span>/scripts/GenerateData.java ...
-</code></pre>
-<p><img class="emoji" draggable="false" alt="👌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f44c.svg" data-marp-twemoji=""/> <strong>Les dépendances sont trouvées quel que soit le répertoire de lancement</strong></p>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="17" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">

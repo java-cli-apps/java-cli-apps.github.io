@@ -25,7 +25,7 @@ check-install-dir:
 	@test -n '$(INSTALL_DIR)' || { echo "You need to specify an installation directory, for example 'INSTALL_DIR=~ make install'"; exit 1; }
 
 build: prepare
-	cp $(APP_NAME).java $(BUILD_APP)/scripts
+	cp *.java $(BUILD_APP)/scripts
 	cp $(APP_NAME).sh $(BUILD_APP)/bin
 	cp --recursive lib/ $(BUILD_APP)
 

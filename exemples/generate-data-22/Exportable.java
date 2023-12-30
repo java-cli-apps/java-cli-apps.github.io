@@ -1,0 +1,3 @@
+interface Exportable {
+    String toSQLInserts();
+}

@@ -28,8 +28,6 @@ Vous pouvez :
 
 ## Tester depuis ce dépot Git
 
-![Tester en mode "dev"](../../images/GenerateData.gif)
-
 ```bash
 APP_DIR=. ./GenerateData.java \
 	--column id::random \
@@ -107,8 +105,6 @@ Archive:  build/GenerateData.zip
 ```
 
 ## Tester l'application installée
-
-![Tester l'application installée](../../images/InstallGenerateData.gif)
 
 ```bash
 export PATH=$HOME/generate-data/bin:$PATH

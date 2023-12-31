@@ -26,7 +26,7 @@ import static picocli.CommandLine.Command;
 import static picocli.CommandLine.Option;
 
 @Command(name = "GenerateData", mixinStandardHelpOptions = true, version = "0.1")
-class GenerateData implements Callable<Integer> {
+class GenerateData21 implements Callable<Integer> {
 
     @Option(names = {"-c", "--column"}, description = "Map a column with a fixed value, mapping function or value from a file")
     String[] columnMappings;
@@ -44,7 +44,7 @@ class GenerateData implements Callable<Integer> {
      * et l'utilisation de <code>--enable-preview</code>.
      */
     void main(String... args) {
-        System.exit(new CommandLine(new GenerateData()).execute(args));
+        System.exit(new CommandLine(new GenerateData21()).execute(args));
     }
 
     @Override

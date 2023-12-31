@@ -16,13 +16,13 @@ package: build
 	cd $(BUILD) && zip --recurse-paths $(APP_NAME).zip $(APP_DIR)/
 
 install: check-install-dir
-	unzip -d $(INSTALL_DIR) $(BUILD)/$(APP_NAME).zip
+	unzip -d $(PREFIX) $(BUILD)/$(APP_NAME).zip
 
 test-install: check-install-dir
-	PATH=$(INSTALL_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh --help
+	PATH=$(PREFIX)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh --help
 
 check-install-dir:
-	@test -n '$(INSTALL_DIR)' || { echo "You need to specify an installation directory, for example 'INSTALL_DIR=~ make install'"; exit 1; }
+	@test -n '$(PREFIX)' || { echo "You need to specify an installation directory, for example 'PREFIX=~ make install'"; exit 1; }
 
 build: prepare
 	cp *.java $(BUILD_APP)/scripts

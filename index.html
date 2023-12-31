@@ -268,14 +268,14 @@ Hello Paris,JUG
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="14" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="packager-notre-application">Packager notre application</h2>
-<p><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Créer une archive au format <code>zip</code> avec des répertoires <code>scripts</code>, <code>lib</code> et <code>bin</code> :</p>
+<p><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Créer une archive au format <code>zip</code> avec des répertoires <code>src</code>, <code>lib</code> et <code>bin</code> :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">~/generate-data:$ unzip -l build/GenerateData.zip
 Archive:  build/GenerateData.zip
   Length      Date    Time    Name
 ---------  ---------- -----   ----
         0  2023-12-23 15:35   generate-data/
-        0  2023-12-23 15:35   generate-data/scripts/
-    11431  2023-12-23 15:35   generate-data/scripts/GenerateData.java
+        0  2023-12-23 15:35   generate-data/src/
+    11431  2023-12-23 15:35   generate-data/src/GenerateData.java
         0  2023-12-23 15:35   generate-data/lib/
    657952  2023-12-23 15:35   generate-data/lib/commons-lang3-3.14.0.jar
    415128  2023-12-23 15:35   generate-data/lib/picocli-4.7.5.jar
@@ -311,7 +311,7 @@ Archive:  build/GenerateData.zip
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="le-shell-de-lancement">Le Shell de lancement</h2>
 <p>Lancer l'application avec un environnement modifié :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=... <span class="hljs-variable">$APP_DIR</span>/scripts/GenerateData.java ...
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=... <span class="hljs-variable">$APP_DIR</span>/src/GenerateData.java ...
 </code></pre>
 <p>Le <code>classpath</code> devient :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath <span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.5.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.14.0.jar
@@ -333,12 +333,12 @@ BUILD_APP=<span class="hljs-variable">$(BUILD)</span>/<span class="hljs-variable
 	cd <span class="hljs-variable">$(BUILD)</span> &amp;&amp; zip --recurse-paths <span class="hljs-variable">$(APP_NAME)</span>.zip <span class="hljs-variable">$(APP_DIR)</span>/
 
 <span class="hljs-section">build: prepare</span>
-	cp <span class="hljs-variable">$(APP_NAME)</span>.java <span class="hljs-variable">$(BUILD_APP)</span>/scripts
+	cp <span class="hljs-variable">$(APP_NAME)</span>.java <span class="hljs-variable">$(BUILD_APP)</span>/src
 	cp <span class="hljs-variable">$(APP_NAME)</span>.sh <span class="hljs-variable">$(BUILD_APP)</span>/bin
 	cp --recursive lib/ <span class="hljs-variable">$(BUILD_APP)</span>
 
 <span class="hljs-section">prepare: clean</span>
-	mkdir --parents <span class="hljs-variable">$(BUILD_APP)</span> <span class="hljs-variable">$(BUILD_APP)</span>/scripts <span class="hljs-variable">$(BUILD_APP)</span>/bin <span class="hljs-variable">$(BUILD_APP)</span>/lib
+	mkdir --parents <span class="hljs-variable">$(BUILD_APP)</span> <span class="hljs-variable">$(BUILD_APP)</span>/src <span class="hljs-variable">$(BUILD_APP)</span>/bin <span class="hljs-variable">$(BUILD_APP)</span>/lib
 
 <span class="hljs-section">clean:</span>
 	rm --force --recursive <span class="hljs-variable">$(BUILD)</span>

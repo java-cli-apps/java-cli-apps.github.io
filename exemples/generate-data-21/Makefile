@@ -5,7 +5,7 @@ BUILD=build
 BUILD_APP=$(BUILD)/$(APP_DIR)
 
 test:
-	APP_DIR=. ./GenerateData.java \
+	APP_DIR=. ./$(APP_NAME).java \
 		--column id::random \
 		--column numero_client::file::clients.txt \
 		--column montant::random \

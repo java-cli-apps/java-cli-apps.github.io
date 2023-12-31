@@ -286,16 +286,14 @@ Archive:  build/GenerateData.zip
 </code></pre>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="3" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="15" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="2" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="15" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="pourquoi-un-shell-de-lancement">Pourquoi un Shell de lancement ?</h2>
-<ul>
-<li data-marpit-fragment="1">
 <p>Les <code>jar</code> des dépendances sont trouvés relativement au fichier Java :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar
 </code></pre>
-</li>
-<li data-marpit-fragment="2">
+<ul>
+<li data-marpit-fragment="1">
 <p>L'application sera lancée avec un chemin :</p>
 <ul>
 <li>Complet</li>
@@ -303,7 +301,7 @@ Archive:  build/GenerateData.zip
 <li>Sans chemin du tout</li>
 </ul>
 </li>
-<li data-marpit-fragment="3">
+<li data-marpit-fragment="2">
 <p><img class="emoji" draggable="false" alt="😬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f62c.svg" data-marp-twemoji=""/> <strong>On n'est pas indépendant du répertoire de lancement</strong></p>
 </li>
 </ul>
@@ -312,13 +310,10 @@ Archive:  build/GenerateData.zip
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="16" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="le-shell-de-lancement">Le Shell de lancement</h2>
-<p>Définir une variable d'environnement :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=...
-</code></pre>
-<p>Lancer l'application avec un environnement :</p>
+<p>Lancer l'application avec un environnement modifié :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=... <span class="hljs-variable">$APP_DIR</span>/scripts/GenerateData.java ...
 </code></pre>
-<p>Et le <code>classpath</code> modifié :</p>
+<p>Le <code>classpath</code> devient :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath <span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.5.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.14.0.jar
 </code></pre>
 <footer>Paris JUG Academy - 2024</footer>
@@ -418,7 +413,7 @@ BUILD_APP=<span class="hljs-variable">$(BUILD)</span>/<span class="hljs-variable
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="%F0%9F%99%8B-des-questions"><img class="emoji" draggable="false" alt="🙋" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64b.svg" data-marp-twemoji=""/> Des questions ?</h2>
 <p><strong>Et vous, vous faites comment pour partager vos applications dans vos équipes ?</strong></p>
-<p>Slides &amp; Code de démo: <a href="https://github.com/java-cli-apps/java-cli-apps.github.io/">https://github.com/java-cli-apps/java-cli-apps.github.io/</a></p>
+<p>Slides &amp; Code de démo: <a href="https://github.com/java-cli-apps/java-cli-apps.github.io">https://github.com/java-cli-apps/java-cli-apps.github.io</a></p>
 <p>Contact: <a href="https://twitter.com/grumpyf0x48">https://twitter.com/grumpyf0x48</a></p>
 <footer>Paris JUG Academy - 2024</footer>
 </section>

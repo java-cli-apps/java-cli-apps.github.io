@@ -203,7 +203,7 @@ Hello Paris,JUG
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="11" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="un-script-pour-g%C3%A9n%C3%A9rer-des-donn%C3%A9es-de-test">Un script pour générer des données de test</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 --enable-preview -classpath lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 --enable-preview --class-path lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
 
 <span class="hljs-keyword">import</span> ...
 
@@ -290,7 +290,7 @@ Archive:  build/GenerateData.zip
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="pourquoi-un-shell-de-lancement">Pourquoi un Shell de lancement ?</h2>
 <p>Les <code>jar</code> des dépendances sont trouvés relativement au fichier Java :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">--class-path lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar
 </code></pre>
 <ul>
 <li data-marpit-fragment="1">
@@ -314,7 +314,7 @@ Archive:  build/GenerateData.zip
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">APP_DIR=... <span class="hljs-variable">$APP_DIR</span>/src/GenerateData.java ...
 </code></pre>
 <p>Le <code>classpath</code> devient :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">-classpath <span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.5.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.14.0.jar
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">--class-path <span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.5.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.14.0.jar
 </code></pre>
 <p><img class="emoji" draggable="false" alt="😎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f60e.svg" data-marp-twemoji=""/> <strong>On est maintenant indépendant du répertoire de lancement</strong></p>
 <footer>Paris JUG Academy - 2024</footer>
@@ -366,15 +366,15 @@ BUILD_APP=<span class="hljs-variable">$(BUILD)</span>/<span class="hljs-variable
 <li data-marpit-fragment="2">
 <p><img class="emoji" draggable="false" alt="👎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f44e.svg" data-marp-twemoji=""/> Inconvénients</p>
 <ul>
-<li>Le code source est compilé à chaque fois</li>
 <li>On est limité à un seul fichier source</li>
 <li>Besoin de gérer nous même les dépendances</li>
+<li>Le code est compilé à chaque fois</li>
 </ul>
 </li>
 </ul>
 <footer>Paris JUG Academy - 2024</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="6" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="20" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="5" data-paginate="true" data-header="Partagez simplement vos Java CLI Apps" data-footer="Paris JUG Academy - 2024" data-theme="default" data-marpit-pagination="20" style="--paginate:true;--header:Partagez simplement vos Java CLI Apps;--footer:Paris JUG Academy - 2024;--theme:default;" data-marpit-pagination-total="23">
 <header>Partagez simplement vos Java CLI Apps</header>
 <h2 id="comment-on-peut-am%C3%A9liorer-%C3%A7a">Comment on peut améliorer ça ?</h2>
 <ul>
@@ -388,8 +388,7 @@ BUILD_APP=<span class="hljs-variable">$(BUILD)</span>/<span class="hljs-variable
 <li data-marpit-fragment="4">
 <p>Gérer nous même les dépendances</p>
 <ul>
-<li data-marpit-fragment="5">Packager l'archive <code>zip</code> avec Gradle</li>
-<li data-marpit-fragment="6">Le plugin application inclut sources ET librairies</li>
+<li data-marpit-fragment="5">Packager l'archive <code>zip</code> avec Gradle (plugin application)</li>
 </ul>
 </li>
 </ul>

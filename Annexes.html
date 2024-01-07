@@ -14,7 +14,7 @@
 <h3 id="paris-jug-academy---9-janvier-2024">Paris JUG Academy - 9 Janvier 2024</h3>
 <h3 id="annexes">Annexes</h3>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="default" data-marpit-pagination="1" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="default" data-marpit-pagination="1" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="editer-le-code-avec-idea">Editer le code avec IDEA</h2>
 <ul>
 <li>View -&gt; Open Module Settings
@@ -38,7 +38,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="default" data-marpit-pagination="2" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="default" data-marpit-pagination="2" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="lancer-le-script-generatedatajava">Lancer le script <code>GenerateData.java</code></h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ./GenerateData.java \
      --column <span class="hljs-built_in">id</span>::random --column numero_client::file::clients.txt --column montant::random \
@@ -54,7 +54,7 @@
   (<span class="hljs-string">&#x27;be9eff54-ee0d-471b-8926-ca98f639b344&#x27;</span>, <span class="hljs-string">&#x27;14405&#x27;</span>, <span class="hljs-keyword">null</span>, <span class="hljs-number">350</span>);
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="default" data-marpit-pagination="3" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="default" data-marpit-pagination="3" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="installation-de-lapplication">Installation de l'application</h2>
 <p>Le répertoire d'installation est le répertoire <code>HOME</code> de l'utilisateur :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">~/paris-jug-academy/generate-data:$ unzip -d <span class="hljs-variable">$HOME</span> build/GenerateData.zip
@@ -69,7 +69,7 @@ Archive:  build/GenerateData.zip
   inflating: /home/user/generate-data/bin/GenerateData.sh
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="default" data-marpit-pagination="4" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="default" data-marpit-pagination="4" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="lancement-de-lapplication-install%C3%A9e">Lancement de l'application installée</h2>
 <p>Une fois ajouté le répertoire <code>bin</code> dans le <code>PATH</code> :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">~:$ <span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$HOME</span>/generate-data/bin:<span class="hljs-variable">$PATH</span>
@@ -86,7 +86,26 @@ Usage: GenerateData [-hV] [-n=&lt;lineCount&gt;] [-c=&lt;columnMappings&gt;]...
   -V, --version             Print version information and <span class="hljs-built_in">exit</span>.
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="default" data-marpit-pagination="5" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="default" data-marpit-pagination="5" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
+<h2 id="les-param%C3%A8tres-du-script">Les paramètres du script</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cat</span> create_table.sql
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> commandes (
+    id            uuid <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> <span class="hljs-keyword">constraint</span> &quot;commandes_pk&quot; <span class="hljs-keyword">primary</span> key,
+    numero_client <span class="hljs-type">varchar</span>,
+    date_commande <span class="hljs-type">timestamp</span>,
+    montant       <span class="hljs-type">integer</span>
+);
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cat</span> clients.txt
+10850
+11204
+12311
+12355
+...
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="default" data-marpit-pagination="6" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="lauto-compl%C3%A9tion">L'auto-complétion</h2>
 <p>Ce serait bien de disposer de l'auto-complétion non ?</p>
 <p>On ajoute une cible <code>completion</code> au <code>Makefile</code> dont la cible <code>build</code> dépend :</p>
@@ -105,7 +124,26 @@ Usage: GenerateData [-hV] [-n=&lt;lineCount&gt;] [-c=&lt;columnMappings&gt;]...
 <p>Et on ajoute le script généré à notre archive.</p>
 <p><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" data-marp-twemoji=""/> La commande de génération de la complétion a besoin du <code>.class</code></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="default" data-marpit-pagination="6" style="--paginate:true;--theme:default;" data-marpit-pagination-total="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="2" data-paginate="true" data-theme="default" data-marpit-pagination="7" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
+<h2 id="pourquoi-un-shell-de-lancement">Pourquoi un Shell de lancement ?</h2>
+<p>Les <code>jar</code> des dépendances sont trouvés relativement au fichier Java :</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">--class-path lib/picocli-4.7.5.jar:lib/commons-lang3-3.14.0.jar
+</code></pre>
+<ul>
+<li data-marpit-fragment="1">
+<p>L'application sera lancée avec un chemin :</p>
+<ul>
+<li>Complet</li>
+<li>Relatif</li>
+<li>Sans chemin du tout</li>
+</ul>
+</li>
+<li data-marpit-fragment="2">
+<p><img class="emoji" draggable="false" alt="😬" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f62c.svg" data-marp-twemoji=""/> <strong>On n'est pas indépendant du répertoire de lancement</strong></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="default" data-marpit-pagination="8" style="--paginate:true;--theme:default;" data-marpit-pagination-total="8">
 <h2 id="le-shell-de-lancement-de-lapplication">Le Shell de lancement de l'application</h2>
 <p>Le <code>Shell</code> de lancement :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/usr/bin/bash</span>

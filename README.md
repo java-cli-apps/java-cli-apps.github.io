@@ -8,8 +8,8 @@ Talk présenté à la [Paris JUG Academy](https://www.parisjug.org/events/2024/0
 
 ### Exemples de code
 
-[avec Java 21](exemples/generate-data-21/README.md)
+[Avec Java 21](exemples/generate-data-21/README.md)
 
-[avec Java 22](exemples/generate-data-22/README.md)
+[Avec Java 22](exemples/generate-data-22/README.md)
 
-[JEP 448](exemples/jep-458/README.md)
+[Utilisation de la JEP 448](exemples/jep-458/README.md)

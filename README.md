@@ -1,6 +1,6 @@
 # :floppy_disk: Partagez simplement vos Java CLI Apps
 
-Talk présenté à la [Paris JUG Academy](https://www.parisjug.org/events/2024/01-09-young-blood-11/) le 9 janvier 2024.
+### Talk présenté à la [Paris JUG Academy](https://www.parisjug.org/events/2024/01-09-young-blood-11/) le 9 janvier 2024.
 
 [Slides](https://java-cli-apps.github.io/)
 

@@ -11,8 +11,6 @@ $ tree
 │   └── Hello.java
 ├── fr
 │   └── Hello.java
-├── lib
-│   └── picocli-4.7.5.jar
 ├── PolyglotHello.Java
 └── README.md
 

@@ -37,3 +37,11 @@ $ ./PolyglotHello.java
 ```console
 Bonjour 🇫🇷
 ```
+
+```bash
+$ LANG=en_EN.UTF-8 ./PolyglotHello.java
+```
+
+```console
+Hello 🇬🇧
+```

@@ -1,4 +1,4 @@
-///usr/bin/java --source 21 --enable-preview -classpath $APP_DIR/lib/picocli-4.7.5.jar:$APP_DIR/lib/commons-lang3-3.14.0.jar "$0" "$@"; exit $?
+///usr/bin/java --source 21 --enable-preview --class-path $APP_DIR/lib/picocli-4.7.5.jar:$APP_DIR/lib/commons-lang3-3.14.0.jar "$0" "$@"; exit $?
 
 import org.apache.commons.lang3.RandomStringUtils;
 import picocli.CommandLine;

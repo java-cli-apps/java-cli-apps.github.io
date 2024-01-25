@@ -1,4 +1,4 @@
-///usr/bin/env java --source 22 -classpath $APP_DIR/lib/'*' --enable-preview "$0" "$@"; exit $?
+///usr/bin/env java --source 22 --class-path $APP_DIR/lib/'*' --enable-preview "$0" "$@"; exit $?
 
 import fr.Hello;
 

@@ -11,18 +11,29 @@ $ tree
 │   └── Hello.java
 ├── fr
 │   └── Hello.java
-├── PolyglotHello.Java
+├── lib
+│   ├── jackson-annotations-2.16.1.jar
+│   ├── jackson-core-2.16.1.jar
+│   ├── jackson-databind-2.16.1.jar
+│   └── jemoji-1.3.3.jar
+├── PolyglotHello.java
 └── README.md
 
-3 directories, 5 files
+3 directories, 8 files
 ```
 
 ```bash
 $ echo $LANG
+```
+
+```console
 fr_FR.UTF-8
 ```
 
 ```bash
 $ ./PolyglotHello.java
-Bonjour
+```
+
+```console
+Bonjour 🇫🇷
 ```

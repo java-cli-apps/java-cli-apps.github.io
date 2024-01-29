@@ -8,8 +8,11 @@
 
 ## Exemples de code
 
-[Avec Java 21](exemples/generate-data-21/README.md)
+L'exemple de code du talk qui utilise [Java 21](exemples/generate-data-21/README.md) et dans lequel tout le code source
+se trouve dans le même fichier.
 
-[Avec Java 22](exemples/generate-data-22/README.md)
+Le même exemple que précédemment avec [Java 22](exemples/generate-data-22/README.md) qui permet de déclarer chaque
+classe dans un fichier séparé (JEP 448).
 
-[Utilisation de la JEP 448](exemples/jep-458/README.md)
+Un exemple basique qui montre que la [JEP 448](exemples/jep-458/README.md) permet de charger les classes utilisées par
+la classe lancée sur la ligne de commande.

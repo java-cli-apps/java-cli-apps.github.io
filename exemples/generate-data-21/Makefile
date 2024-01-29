@@ -25,12 +25,12 @@ check-install-dir:
 	@test -n '$(PREFIX)' || { echo "You need to specify an installation directory, for example 'PREFIX=~ make install'"; exit 1; }
 
 build: prepare
-	cp $(APP_NAME).java $(BUILD_APP)/scripts
+	cp $(APP_NAME).java $(BUILD_APP)/src
 	cp $(APP_NAME).sh $(BUILD_APP)/bin
 	cp --recursive lib/ $(BUILD_APP)
 
 prepare: clean
-	mkdir --parents $(BUILD_APP) $(BUILD_APP)/scripts $(BUILD_APP)/bin $(BUILD_APP)/lib
+	mkdir --parents $(BUILD_APP) $(BUILD_APP)/src $(BUILD_APP)/bin $(BUILD_APP)/lib
 
 clean:
 	rm --force --recursive $(BUILD)

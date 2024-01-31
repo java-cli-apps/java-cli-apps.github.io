@@ -60,19 +60,19 @@ make package
 
 ```console
 rm --force --recursive build
-mkdir --parents build/generate-data build/generate-data/scripts build/generate-data/bin build/generate-data/lib
-cp *.java build/generate-data/scripts
+mkdir --parents build/generate-data build/generate-data/src build/generate-data/bin build/generate-data/lib
+cp *.java build/generate-data/src
 cp GenerateData.sh build/generate-data/bin
 cp --recursive lib/ build/generate-data
 cd build && zip --recurse-paths GenerateData.zip generate-data/
   adding: generate-data/ (stored 0%)
-  adding: generate-data/scripts/ (stored 0%)
-  adding: generate-data/scripts/ColumnMappings.java (deflated 68%)
-  adding: generate-data/scripts/TableData.java (deflated 72%)
-  adding: generate-data/scripts/GenerateData.java (deflated 51%)
-  adding: generate-data/scripts/ColumnDefinition.java (deflated 59%)
-  adding: generate-data/scripts/TableDefinition.java (deflated 65%)
-  adding: generate-data/scripts/Exportable.java (stored 0%)
+  adding: generate-data/src/ (stored 0%)
+  adding: generate-data/src/ColumnMappings.java (deflated 68%)
+  adding: generate-data/src/TableData.java (deflated 72%)
+  adding: generate-data/src/GenerateData.java (deflated 51%)
+  adding: generate-data/src/ColumnDefinition.java (deflated 59%)
+  adding: generate-data/src/TableDefinition.java (deflated 65%)
+  adding: generate-data/src/Exportable.java (stored 0%)
   adding: generate-data/lib/ (stored 0%)
   adding: generate-data/lib/commons-lang3-3.14.0.jar (deflated 10%)
   adding: generate-data/lib/picocli-4.7.5.jar (deflated 7%)
@@ -89,13 +89,13 @@ unzip -d $HOME build/GenerateData.zip
 ```console
 Archive:  build/GenerateData.zip
    creating: /home/user/generate-data/
-   creating: /home/user/generate-data/scripts/
-  inflating: /home/user/generate-data/scripts/ColumnMappings.java  
-  inflating: /home/user/generate-data/scripts/TableData.java  
-  inflating: /home/user/generate-data/scripts/GenerateData.java  
-  inflating: /home/user/generate-data/scripts/ColumnDefinition.java  
-  inflating: /home/user/generate-data/scripts/TableDefinition.java  
- extracting: /home/user/generate-data/scripts/Exportable.java  
+   creating: /home/user/generate-data/src/
+  inflating: /home/user/generate-data/src/ColumnMappings.java  
+  inflating: /home/user/generate-data/src/TableData.java  
+  inflating: /home/user/generate-data/src/GenerateData.java  
+  inflating: /home/user/generate-data/src/ColumnDefinition.java  
+  inflating: /home/user/generate-data/src/TableDefinition.java  
+ extracting: /home/user/generate-data/src/Exportable.java  
    creating: /home/user/generate-data/lib/
   inflating: /home/user/generate-data/lib/commons-lang3-3.14.0.jar  
   inflating: /home/user/generate-data/lib/picocli-4.7.5.jar  

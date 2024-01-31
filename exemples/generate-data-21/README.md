@@ -59,14 +59,14 @@ make package
 
 ```console
 rm --force --recursive build
-mkdir --parents build/generate-data build/generate-data/scripts build/generate-data/bin build/generate-data/lib
-cp GenerateData.java build/generate-data/scripts
+mkdir --parents build/generate-data build/generate-data/src build/generate-data/bin build/generate-data/lib
+cp GenerateData.java build/generate-data/src
 cp GenerateData.sh build/generate-data/bin
 cp --recursive lib/ build/generate-data
 cd build && zip --recurse-paths GenerateData.zip generate-data/
   adding: generate-data/ (stored 0%)
-  adding: generate-data/scripts/ (stored 0%)
-  adding: generate-data/scripts/GenerateData.java (deflated 76%)
+  adding: generate-data/src/ (stored 0%)
+  adding: generate-data/src/GenerateData.java (deflated 76%)
   adding: generate-data/lib/ (stored 0%)
   adding: generate-data/lib/commons-lang3-3.14.0.jar (deflated 10%)
   adding: generate-data/lib/picocli-4.7.5.jar (deflated 7%)
@@ -83,8 +83,8 @@ unzip -d $HOME build/GenerateData.zip
 ```console
 Archive:  build/GenerateData.zip
 creating: /home/user/generate-data/
-creating: /home/user/generate-data/scripts/
-inflating: /home/user/generate-data/scripts/GenerateData.java  
+creating: /home/user/generate-data/src/
+inflating: /home/user/generate-data/src/GenerateData.java  
 creating: /home/user/generate-data/lib/
 inflating: /home/user/generate-data/lib/commons-lang3-3.14.0.jar  
 inflating: /home/user/generate-data/lib/picocli-4.7.5.jar  

@@ -2,9 +2,11 @@
 
 ## Talk présenté à la [Paris JUG Academy](https://www.parisjug.org/events/2024/01-09-young-blood-11/) le 9 janvier 2024
 
+[![Vidéo](images/video-paris-jug.png)](https://youtu.be/Disp1KJDKzA?si=_Owz6_UxddetUzCT)
+
 [Slides](https://java-cli-apps.github.io/)
 
-[Annexes](https://java-cli-apps.github.io/Annexes.html)
+[Slides Annexes](https://java-cli-apps.github.io/Annexes.html)
 
 ## Exemples de code
 

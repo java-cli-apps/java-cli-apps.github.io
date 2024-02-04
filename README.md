@@ -10,6 +10,12 @@
 
 ## Exemples de code
 
+### Exemple d'utilisation de la JEP 458
+
+Un exemple basique d'[utilisation de la JEP 458](exemples/jep-458/README.md) (Launch Multi-File Source-Code Programs) qui étend la
+[JEP 330](https://openjdk.org/jeps/330) (Launch Single-File Source-Code Programs) et permet de charger les classes
+utilisées par la classe lancée sur la ligne de commande.
+
 ### Exemple du talk
 
 L'exemple de code du talk qui utilise [Java 21](exemples/generate-data-21/README.md) et dans lequel tout le code source
@@ -17,10 +23,5 @@ se trouve dans le même fichier.
 
 ### Exemple du talk avec Java 22
 
-Le même exemple que précédemment avec [Java 22](exemples/generate-data-22/README.md) qui permet de déclarer chaque
-classe dans un fichier séparé (JEP 448).
-
-### Un exemple d'utilisation de la JEP 448
-
-Un exemple basique qui montre que la [JEP 448](exemples/jep-458/README.md) permet de charger les classes utilisées par
-la classe lancée sur la ligne de commande.
+Le même exemple avec [Java 22](exemples/generate-data-22/README.md) qui permet de déclarer chaque classe dans un
+fichier séparé ([JEP 458](https://openjdk.org/jeps/458)).

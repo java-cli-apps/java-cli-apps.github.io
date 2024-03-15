@@ -23,5 +23,5 @@ se trouve dans le même fichier.
 
 ### Exemple du talk avec Java 22
 
-Le même exemple avec [Java 22](exemples/generate-data-22/README.md) qui permet de déclarer chaque classe dans un
-fichier séparé ([JEP 458](https://openjdk.org/jeps/458)).
+Le même exemple avec [Java 22](exemples/generate-data-22/README.md) qui permet de déclarer chaque classe dans un fichier
+séparé ([JEP 458](https://openjdk.org/jeps/458)).

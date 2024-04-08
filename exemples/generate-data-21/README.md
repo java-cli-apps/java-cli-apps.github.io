@@ -82,22 +82,22 @@ unzip -d $HOME build/GenerateData.zip
 
 ```console
 Archive:  build/GenerateData.zip
-creating: /home/user/generate-data/
-creating: /home/user/generate-data/src/
-inflating: /home/user/generate-data/src/GenerateData.java  
-creating: /home/user/generate-data/lib/
-inflating: /home/user/generate-data/lib/commons-lang3-3.14.0.jar  
-inflating: /home/user/generate-data/lib/picocli-4.7.5.jar  
-creating: /home/user/generate-data/bin/
-inflating: /home/user/generate-data/bin/GenerateData.sh  
+creating: /home/installApps/generate-data/
+creating: /home/installApps/generate-data/src/
+inflating: /home/installApps/generate-data/src/GenerateData.java  
+creating: /home/installApps/generate-data/lib/
+inflating: /home/installApps/generate-data/lib/commons-lang3-3.14.0.jar  
+inflating: /home/installApps/generate-data/lib/picocli-4.7.5.jar  
+creating: /home/installApps/generate-data/bin/
+inflating: /home/installApps/generate-data/bin/GenerateData.sh  
 ```
 
 ## Tester l'application installée
 
-![Tester l'application installée](../../images/InstallGenerateData.gif)
+![Tester l'application installée](../../images/GenerateDataInstall.gif)
 
 ```bash
-export PATH=$HOME/generate-data/bin:$PATH
+export PATH=$HOME/installApps/generate-data/bin:$PATH
 ```
 
 Puis :
@@ -109,7 +109,7 @@ GenerateData.sh --help
 ou bien :
 
 ```bash
-PATH=$HOME/generate-data/bin:$PATH GenerateData.sh --help
+PATH=$HOME/installApps/generate-data/bin:$PATH GenerateData.sh --help
 ```
 
 ```console

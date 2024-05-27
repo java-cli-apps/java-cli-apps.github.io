@@ -1,1 +1,3 @@
-# 💾 Partagez simplement vos Java CLI Apps - Devoxx France - 2024
+# 💾 Partagez simplement vos Java CLI Apps
+
+Cette page hébergera les slides de mon talk « 💾 Partagez simplement vos Java CLI Apps ».

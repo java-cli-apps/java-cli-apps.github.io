@@ -1,6 +1,7 @@
-import org.apache.commons.lang3.RandomStringUtils;
 import java.util.Random;
 import static java.util.UUID.randomUUID;
+
+import org.apache.commons.lang3.RandomStringUtils;
 
 record ColumnDefinition(String name, ColumnType type) {
 

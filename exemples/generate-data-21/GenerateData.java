@@ -16,6 +16,7 @@ import java.util.StringJoiner;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.stream.IntStream;
+import static java.util.UUID.randomUUID;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Option;
@@ -220,7 +221,7 @@ class GenerateData21 implements Callable<Integer> {
 
             Object randomValue() {
                 return switch (this) {
-                    case UUID -> java.util.UUID.randomUUID();
+                    case UUID -> randomUUID();
                     case INTEGER -> Math.abs((new Random().nextInt(10) + 1) * 50);
                     case VARCHAR -> RandomStringUtils.randomAlphabetic(32);
                     case TIMESTAMP -> throw new UnsupportedOperationException("Not implemented yet !");
@@ -268,6 +269,7 @@ class GenerateData21 implements Callable<Integer> {
             }
         }
     }
+
     interface Exportable {
         String toSQLInserts();
     }

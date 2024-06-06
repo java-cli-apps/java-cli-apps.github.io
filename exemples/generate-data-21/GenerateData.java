@@ -1,9 +1,5 @@
 ///usr/bin/java --source 21 --enable-preview --class-path $APP_DIR/lib/picocli-4.7.6.jar:$APP_DIR/lib/commons-lang3-3.14.0.jar "$0" "$@"; exit $?
 
-import org.apache.commons.lang3.RandomStringUtils;
-import picocli.CommandLine;
-import picocli.CommandLine.Parameters;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,9 +17,12 @@ import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.stream.IntStream;
 
-import static java.util.UUID.randomUUID;
-import static picocli.CommandLine.Command;
-import static picocli.CommandLine.Option;
+import picocli.CommandLine;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Command;
+
+import org.apache.commons.lang3.RandomStringUtils;
 
 @Command(name = "GenerateData", mixinStandardHelpOptions = true, version = "0.1")
 class GenerateData21 implements Callable<Integer> {
@@ -221,7 +220,7 @@ class GenerateData21 implements Callable<Integer> {
 
             Object randomValue() {
                 return switch (this) {
-                    case UUID -> randomUUID();
+                    case UUID -> java.util.UUID.randomUUID();
                     case INTEGER -> Math.abs((new Random().nextInt(10) + 1) * 50);
                     case VARCHAR -> RandomStringUtils.randomAlphabetic(32);
                     case TIMESTAMP -> throw new UnsupportedOperationException("Not implemented yet !");

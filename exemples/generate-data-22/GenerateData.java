@@ -1,14 +1,13 @@
 ///usr/bin/env java --source 22 --enable-preview --class-path $APP_DIR/lib/picocli-4.7.6.jar:$APP_DIR/lib/commons-lang3-3.14.0.jar "$0" "$@"; exit $?
 
-import picocli.CommandLine;
-import picocli.CommandLine.Parameters;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.Callable;
 
-import static picocli.CommandLine.Command;
-import static picocli.CommandLine.Option;
+import picocli.CommandLine;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Command;
 
 @Command(name = "GenerateData", mixinStandardHelpOptions = true, version = "0.1")
 class GenerateData22 implements Callable<Integer> {

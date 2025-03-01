@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/exemples/generate-data-22/lib/picocli-4.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/exemples/generate-data-22/lib/commons-lang3-3.14.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

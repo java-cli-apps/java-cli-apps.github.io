@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/exemples/generate-data-21" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/exemples/generate-data-22" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/exemples/jep-458" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="picocli-4.7.5" level="project" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="54b5c020-3549-46d0-97cd-4434d8d78f5d" />
+  </component>
+</module>

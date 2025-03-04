@@ -72,7 +72,7 @@ document.addEventListener('click', (e) => {
 <p><img src="images/confused.gif" alt="" style="width:330px;height:265px;" /></p>
 <p>Avec quel outil ?</p>
 <ul>
-<li data-marpit-fragment="1">Utiliser <img src="images/jbang.png" alt="" style="width:121px;height:28px;" /></li>
+<li data-marpit-fragment="1"><img src="images/jbang.png" alt="" style="width:121px;height:28px;" /></li>
 <li data-marpit-fragment="2">Installer JBang sur la machine cible <img class="emoji" draggable="false" alt="🤔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f914.svg" data-marp-twemoji=""/></li>
 <li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f449.svg" data-marp-twemoji=""/> <strong>Restons sur le JDK</strong></li>
 </ul>
@@ -122,8 +122,6 @@ $ java Hello Human Talks
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
 <h2 id="scripting-avec-java-11-et-linux">Scripting avec Java 11 et Linux</h2>
 <p>Utilisons un <strong>Shebang</strong> pour lancer notre programme :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cat</span> Hello
-</code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/usr/bin/java --source 11</span>
 
 class Hello {
@@ -131,6 +129,8 @@ class Hello {
         System.out.println(<span class="hljs-string">&quot;Hello &quot;</span> + String.<span class="hljs-built_in">join</span>(<span class="hljs-string">&quot;,&quot;</span>, args));
     }
 }
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">chmod</span> u+x Hello
 </code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ./Hello Human Talks
 </code></pre>

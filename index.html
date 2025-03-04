@@ -138,7 +138,7 @@ class Hello {
 </code></pre>
 <footer>Human Talks Paris</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="8" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="8" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
 <h2 id="java-11-et-linux-%F0%9F%A4%94">Java 11 et Linux <img class="emoji" draggable="false" alt="🤔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f914.svg" data-marp-twemoji=""/></h2>
 <p>Pourquoi cette façon de faire pose un problème aux devs ?</p>
@@ -151,9 +151,9 @@ class Hello {
 }
 </code></pre>
 <ul>
-<li data-marpit-fragment="1">Le nom du fichier source n'a plus l'extension <code>.java</code></li>
-<li data-marpit-fragment="2">La première ligne <code>#!/usr/bin/java ...</code> n'est pas valide en Java</li>
-<li data-marpit-fragment="3"><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> <strong>Et si on nommait le fichier <code>Hello.java</code> comme au début ?</strong></li>
+<li>Le nom du fichier source n'a plus l'extension <code>.java</code></li>
+<li>La première ligne <code>#!/usr/bin/java ...</code> n'est pas valide en Java</li>
+<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> <strong>Et si on nommait le fichier <code>Hello.java</code> comme au début ?</strong></li>
 </ul>
 <footer>Human Talks Paris</footer>
 </section>
@@ -180,13 +180,13 @@ error: compilation failed
 <h2 id="scripting-avec-java-11-et-linux-%F0%9F%94%8E">Scripting avec Java 11 et Linux <img class="emoji" draggable="false" alt="🔎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f50e.svg" data-marp-twemoji=""/></h2>
 <ul>
 <li data-marpit-fragment="1">
-<p>Notre script se lance dans le terminal</p>
+<p>Notre script se lance dans le terminal <img class="emoji" draggable="false" alt="👍" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f44d.svg" data-marp-twemoji=""/></p>
 </li>
 <li data-marpit-fragment="2">
-<p>On ne sait pas l'éditer <img class="emoji" draggable="false" alt="😥" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f625.svg" data-marp-twemoji=""/></p>
+<p>On ne sait pas l'éditer <img class="emoji" draggable="false" alt="👎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f44e.svg" data-marp-twemoji=""/></p>
 </li>
 <li data-marpit-fragment="3">
-<p><strong>On a besoin d'un mode de lancement compris par Bash et ignoré de Java</strong></p>
+<p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f449.svg" data-marp-twemoji=""/> <strong>On a besoin d'un mode de lancement compris par Bash et ignoré de Java</strong></p>
 </li>
 <li data-marpit-fragment="4">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 11 &quot;$0&quot; &quot;$@&quot;; exit $?</span>
@@ -209,8 +209,8 @@ error: compilation failed
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="11" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
-<h2 id="une-cli-app-pour-g%C3%A9n%C3%A9rer-des-donn%C3%A9es-de-test">Une CLI App pour générer des données de test</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 --enable-preview --class-path lib/picocli-4.7.6.jar:lib/commons-lang3-3.17.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
+<h2 id="une-cli-avec-java-21-pour-g%C3%A9n%C3%A9rer-des-donn%C3%A9es-de-test">Une CLI avec Java 21 pour générer des données de test</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">///usr/bin/java --source 21 --class-path lib/picocli-4.7.6.jar:lib/commons-lang3-3.17.0.jar &quot;$0&quot; &quot;$@&quot;; exit $?</span>
 
 <span class="hljs-keyword">import</span> ...
 
@@ -226,7 +226,7 @@ error: compilation failed
     <span class="hljs-meta">@Parameters(description = &quot;The file containing the SQL create table request&quot;)</span>
     File sqlRequestFile;
 
-    <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String... args)</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String... args)</span> {
         System.exit(<span class="hljs-keyword">new</span> <span class="hljs-title class_">CommandLine</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">GenerateData</span>()).execute(args));
     }
 
@@ -251,8 +251,8 @@ error: compilation failed
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="13" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
-<h2 id="le-livrable-de-lapplication">Le livrable de l'application</h2>
-<p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f449.svg" data-marp-twemoji=""/> Créer une archive au format <code>zip</code> avec des répertoires <code>src</code>, <code>lib</code> et <code>bin</code> :</p>
+<h2 id="%F0%9F%94%97-partager-notre-application"><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partager notre application</h2>
+<p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f449.svg" data-marp-twemoji=""/> Créer une archive contenant les répertoires <code>src</code>, <code>lib</code> et <code>bin</code> :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ unzip -l build/GenerateData.zip
 </code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-console">Archive:  build/GenerateData.zip
@@ -274,19 +274,21 @@ error: compilation failed
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="14" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
 <h2 id="%F0%9F%9A%80-le-shell-de-lancement"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f680.svg" data-marp-twemoji=""/> Le Shell de lancement</h2>
-<p>Permet de changer le classpath de :</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">lib/picocli-4.7.6.jar:lib/commons-lang3-3.17.0.jar
-</code></pre>
-<p>à :</p>
+<p>Il a pour but de :</p>
+<ul>
+<li>Lancer le fichier <code>GenerateData.java</code></li>
+<li>Renseigner le répertoire d'installation de l'application <code>APP_DIR</code></li>
+</ul>
+<p>utilisé par le <code>CLASSPATH</code> :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-variable">$APP_DIR</span>/lib/picocli-4.7.6.jar:<span class="hljs-variable">$APP_DIR</span>/lib/commons-lang3-3.17.0.jar
 </code></pre>
-<p><strong>pour être indépendant du répertoire de lancement</strong> <img class="emoji" draggable="false" alt="😎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f60e.svg" data-marp-twemoji=""/></p>
+<p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f449.svg" data-marp-twemoji=""/> Nos dépendances sont bien résolues <img class="emoji" draggable="false" alt="😎" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f60e.svg" data-marp-twemoji=""/></p>
 <footer>Human Talks Paris</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="15" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
-<h2 id="%F0%9F%93%A6-packager-notre-application"><img class="emoji" draggable="false" alt="📦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4e6.svg" data-marp-twemoji=""/> Packager notre application</h2>
-<p>On a juste besoin de quelques commandes dans un Makefile :</p>
+<h2 id="%F0%9F%93%A6-le-packaging"><img class="emoji" draggable="false" alt="📦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4e6.svg" data-marp-twemoji=""/> Le Packaging</h2>
+<p>On a besoin de quelques commandes dans un Makefile :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-Makefile">APP_NAME := GenerateData
 APP_DIR := generate-data
 
@@ -381,14 +383,14 @@ tasks.named&lt;Zip&gt;(<span class="hljs-string">&quot;scriptsDistZip&quot;</spa
 <p>Vous trouverez sur l'organisation <img src="images/github.ico" alt="" style="width:28px;height:28px;" /> <a href="https://github.com/java-cli-apps">java-cli-apps</a> :</p>
 <ul>
 <li>
-<p>L'exemple de code du talk</p>
-</li>
-<li>
 <p>Des templates d'applications pour débuter</p>
 <ul>
 <li><a href="https://github.com/java-cli-apps/basic-java-23-quickstart">basic-java-23-quickstart</a></li>
 <li><a href="https://github.com/java-cli-apps/java-23-quickstart">java-23-quickstart</a></li>
 </ul>
+</li>
+<li>
+<p>L'exemple de code du talk</p>
 </li>
 <li>
 <p>Les slides du talk</p>
@@ -423,7 +425,7 @@ tasks.named&lt;Zip&gt;(<span class="hljs-string">&quot;scriptsDistZip&quot;</spa
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-header="🔗 Partagez simplement vos Java CLI Apps" data-footer="Human Talks Paris" data-theme="my-theme" lang="fr-FR" data-marpit-pagination="22" style="--paginate:true;--header:🔗 Partagez simplement vos Java CLI Apps;--footer:Human Talks Paris;--theme:my-theme;" data-marpit-pagination-total="23">
 <header><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Partagez simplement vos Java CLI Apps</header>
-<h2 id="qui-suis-je">Qui suis-je ?</h2>
+<h2 id="%F0%9F%99%8F-merci-de-votre-attention"><img class="emoji" draggable="false" alt="🙏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64f.svg" data-marp-twemoji=""/> Merci de votre attention</h2>
 <p><img src="images/FOPY.jpg" alt="" style="width:99px;height:130px;" /></p>
 <p>Pierre-Yves Fourmond</p>
 <p>Développeur Back<br />
